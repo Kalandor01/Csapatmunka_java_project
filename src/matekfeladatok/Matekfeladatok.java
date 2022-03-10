@@ -17,6 +17,11 @@ public class Matekfeladatok
                 + "\"osztás(4): "
                 );
         int szam = sc.nextInt();
+        while(szam>4 || szam<1)
+        {
+            System.out.print("Kérlek írj be egy másik számot: ");
+            szam = sc.nextInt();
+        }
         if(szam == 1){
             System.out.println("ÖSSZEADÁS");
         }
@@ -26,11 +31,8 @@ public class Matekfeladatok
         else if(szam == 3){
             System.out.println("SZORZÁS");        
         }
-        else if(szam == 4){
-            System.out.println("OSZTÁS");
-        }
         else{
-            System.out.println("Kérlek írj be egy másik számot");    
+            System.out.println("OSZTÁS");
         }
         return szam-1;
     }
@@ -83,15 +85,16 @@ public class Matekfeladatok
             }
             else
             {
-                ans = a/b;
+                Double ans_d = (a*1.0)/b;
                 operator = "/";
-                while( ans > 100 || ans < 1)
+                while( ans_d > 100.0 || ans_d < 1.0 || ans_d % 1!=0)
                 {
                     //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
-                    ans = a/b;
+                    ans_d = (a*1.0)/b;
                 }
+                ans = (int)Math.round(ans_d);
             }
             System.out.printf("Mennyi %s %s %s = ", a, operator, b);
             int guess = sc.nextInt();
