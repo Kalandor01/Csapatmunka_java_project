@@ -31,9 +31,10 @@ public class Matekfeladatok
                 operator = "+";
                 while( ans > 100 || ans < 1)
                 {
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
-                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
+                    ans = a+b;
                 }
             }
             else if(type==1)
@@ -42,9 +43,10 @@ public class Matekfeladatok
                 operator = "-";
                 while( ans > 100 || ans < 1)
                 {
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
-                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
+                    ans = a-b;
                 }
             }
             else if(type==2)
@@ -56,6 +58,7 @@ public class Matekfeladatok
                     //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
+                    ans = a*b;
                 }
             }
             else
@@ -67,6 +70,7 @@ public class Matekfeladatok
                     //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
+                    ans = a/b;
                 }
             }
             System.out.printf("Mennyi %s %s %s = ", a, operator, b);
