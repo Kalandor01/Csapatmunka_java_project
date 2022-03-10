@@ -8,6 +8,10 @@ public class Matekfeladatok
     
     public static int type_choice()
     {
+        System.out.println("Szia");
+        System.out.println("Ez a program azért készült, hogy segítsen a "
+                + "4 alapművelet gyakorlásában");
+        System.out.printf("Kérlek válasz egy feladattípust");
         return 0;
     }
     
