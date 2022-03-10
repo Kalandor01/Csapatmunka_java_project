@@ -19,42 +19,66 @@ public class Matekfeladatok
     {
         int score = 0;
         //+ - * /
-        int a, b;
+        int a = 1, b = 1, ans = 1;
+        String operator= "*";
         for(int x=0;x<10;x++)
         {
+            a = (int)(Math.random()*100);
+            b = (int)(Math.random()*100);
             if(type==0)
             {
-                a = (int)(Math.random()*100);
-                b = (int)(Math.random()*100);
-                while( (a+b) > 100 || (a+b) < 1)
+                ans = a+b;
+                operator = "+";
+                while( ans > 100 || ans < 1)
                 {
-                    //System.out.println(a + " + " + b + " = " + (a+b));
                     a = (int)(Math.random()*100);
                     b = (int)(Math.random()*100);
-                }
-                System.out.printf("Mennyi %s + %s = ", a, b);
-                int ans = sc.nextInt();
-                if(ans == a+b)
-                {
-                    System.out.println("Helyes válasz!");
-                    score += 1;
-                }
-                else
-                {
-                    System.out.println("Rossz válasz!");
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
                 }
             }
             else if(type==1)
             {
-                
+                ans = a-b;
+                operator = "-";
+                while( ans > 100 || ans < 1)
+                {
+                    a = (int)(Math.random()*100);
+                    b = (int)(Math.random()*100);
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
+                }
             }
             else if(type==2)
             {
-                
+                ans = a*b;
+                operator = "*";
+                while( ans > 100 || ans < 1)
+                {
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
+                    a = (int)(Math.random()*100);
+                    b = (int)(Math.random()*100);
+                }
             }
-            else if(type==3)
+            else
             {
-                
+                ans = a/b;
+                operator = "/";
+                while( ans > 100 || ans < 1)
+                {
+                    //System.out.printf("%s %s %s = %s", a, operator, b, ans);
+                    a = (int)(Math.random()*100);
+                    b = (int)(Math.random()*100);
+                }
+            }
+            System.out.printf("Mennyi %s %s %s = ", a, operator, b);
+            int guess = sc.nextInt();
+            if(guess == ans)
+            {
+                System.out.println("Helyes válasz!");
+                score += 1;
+            }
+            else
+            {
+                System.out.println("Rossz válasz!");
             }
         }
         return score/10;
