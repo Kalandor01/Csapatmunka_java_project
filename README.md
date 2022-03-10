@@ -1,4 +1,4 @@
-megrendelői oldal 4 alapművelet(+-*/)
+megrendelői oldal 4 alapművelet(+-*/)\n
 (kisiskolásoknak)
 eredmény 1-100 között
 egész számok
