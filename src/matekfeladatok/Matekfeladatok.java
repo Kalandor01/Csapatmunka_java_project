@@ -34,6 +34,15 @@ public class Matekfeladatok
                 }
                 System.out.printf("Mennyi %s + %s = ", a, b);
                 int ans = sc.nextInt();
+                if(ans == a+b)
+                {
+                    System.out.println("Helyes válasz!");
+                    score += 1;
+                }
+                else
+                {
+                    System.out.println("Rossz válasz!");
+                }
             }
             else if(type==1)
             {
