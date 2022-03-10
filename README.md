@@ -8,6 +8,6 @@ végén statisztika
 user választja a feladat tipusát  
   
 Feladatfelosztás:  
-Rohovszky Ákos: feladatok generálása  
-Ulrich Bence: user választja a feladat tipusát  
-Repka András: ellenörzött végén statisztika  
+Rohovszky Ákos/Kalandor01: feladatok generálása  
+Ulrich Bence/Blaj3n: user választja a feladat tipusát  
+Repka András/RepkaA: ellenörzött végén statisztika  
