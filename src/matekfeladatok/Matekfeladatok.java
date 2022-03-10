@@ -39,11 +39,12 @@ public class Matekfeladatok
     
     public static int exercises(int type)
     {
+        int q_num = 20;
         int score = 0;
         //+ - * /
         int a = 1, b = 1, ans = 1;
         String operator= "*";
-        for(int x=0;x<10;x++)
+        for(int x=0;x<q_num;x++)
         {
             a = (int)(Math.random()*100);
             b = (int)(Math.random()*100);
@@ -108,28 +109,29 @@ public class Matekfeladatok
                 System.out.println("Rossz válasz!");
             }
         }
-        return score/10;
+        return score;
     }
     
     public static void stats(int results)
     {
-        
+        int q_num = 20;
+        /*System.out.println();
+        for(int x=0; x< q_num; x++)
+        {
+            if(results-x > 0)
+                System.out.print("#");
+            else
+                System.out.print("-");
+        }*/
+        System.out.println("\nÁtlagod száma: " + ((results*100) / q_num) + "%");
+        System.out.println("Szia!");
     }
-    // Metódus ami kiszámolja a számnak az átlagát
-    public static float results(int... stats)  {
-        int  sum = 0;
-        for (int f :stats) {
-            sum+= f;
-        }
-        return sum / stats.length;
-    }   
  
     public static void main(String[] args)
     {
         int type = type_choice();
         int results = exercises(type);
         stats(results);
-        System.out.println("Átlagod száma:"+results);
     }
     
 }
